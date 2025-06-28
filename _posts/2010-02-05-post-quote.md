@@ -1,5 +1,6 @@
 ---
 title: "自我介绍"
+date: 2025-06-25T15:34:30-04:00
 categories:
   - Blog
 tags:
