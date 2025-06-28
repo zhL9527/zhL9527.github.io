@@ -1,5 +1,5 @@
 ---
-title: "Introduce"
+title: "简介"
 date: 2025-06-25T15:34:30-04:00
 categories:
   - blog
