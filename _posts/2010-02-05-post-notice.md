@@ -1,5 +1,6 @@
 ---
-title: "Post: Notice"
+title: "部署流程"
+date: 2025-06-25T15:34:30-04:00
 categories:
   - Blog
 tags:
@@ -7,62 +8,20 @@ tags:
   - notice
 ---
 
-A notice displays information that explains nearby content. Often used to call attention to a particular detail.
+远程安装方法
+远程主题类似于基于 Gem 的主题，但不需要更改或列入白名单，因此非常适合使用 GitHub Pages 托管的站点
+创建/替换 的内容 为以下内容：Gemfile
+```html
+source "https://rubygems.org"
 
-When using Kramdown `{: .notice}` can be added after a sentence to assign the `.notice` to the `<p></p>` element. 
-
-**Changes in Service:** We just updated our [privacy policy](#) here to better service our customers. We recommend reviewing the changes.
-{: .notice}
-
-**Primary Notice:** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. [Praesent libero](#). Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.
-{: .notice--primary}
-
-**Info Notice:** Lorem ipsum dolor sit amet, [consectetur adipiscing elit](#). Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.
-{: .notice--info}
-
-**Warning Notice:** Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Integer nec odio](#). Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.
-{: .notice--warning}
-
-**Danger Notice:** Lorem ipsum dolor sit amet, [consectetur adipiscing](#) elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.
-{: .notice--danger}
-
-**Success Notice:** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at [nibh elementum](#) imperdiet.
-{: .notice--success}
-
-Want to wrap several paragraphs or other elements in a notice? Using Liquid to capture the content and then filter it with `markdownify` is a good way to go.
+gem "github-pages", group: :jekyll_plugins
+gem "jekyll-include-cache", group: :jekyll_plugins
+```
+添加到 .jekyll-include-cacheplugins_config.yml
+通过运行以下 Bundler 命令来获取和更新捆绑的 Gem：
 
 ```html
-{% raw %}{% capture notice-2 %}
-#### New Site Features
-
-* You can now have cover images on blog pages
-* Drafts will now auto-save while writing
-{% endcapture %}{% endraw %}
-
-<div class="notice">{% raw %}{{ notice-2 | markdownify }}{% endraw %}</div>
+bundle
 ```
 
-{% capture notice-2 %}
-#### New Site Features
-
-* You can now have cover images on blog pages
-* Drafts will now auto-save while writing
-{% endcapture %}
-
-<div class="notice">
-  {{ notice-2 | markdownify }}
-</div>
-
-Or you could skip the capture and stick with straight HTML.
-
-```html
-<div class="notice">
-  <h4>Message</h4>
-  <p>A basic message.</p>
-</div>
-```
-
-<div class="notice">
-  <h4>Message</h4>
-  <p>A basic message.</p>
-</div>
+添加到您的文件。删除任何其他 或 条目。remote_theme: "mmistakes/minimal-mistakes@4.27.1"_config.ymltheme:remote_theme:
