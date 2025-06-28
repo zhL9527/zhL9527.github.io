@@ -1,5 +1,5 @@
 ---
-title: "Post: Quote"
+title: "自我介绍"
 categories:
   - Blog
 tags:
@@ -7,6 +7,4 @@ tags:
   - quote
 ---
 
-> Only one thing is impossible for God: To find any sense in any copyright law on the planet.
-  
-> <cite><a href="http://www.brainyquote.com/quotes/quotes/m/marktwain163473.html">Mark Twain</a></cite>
+来自西南民族大学的一名本科生，第一次尝试制作个人静态博客，作为开源软件这门课的作业，希望未来能在这条路上走的更远，学会更多的相关知识，这只是个小小的尝试。
